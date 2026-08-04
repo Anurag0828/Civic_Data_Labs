@@ -48,10 +48,13 @@ To ask questions interactively in the terminal, run:
 python query.py
 ```
 
-**Running the Evaluation Script:**
-To automatically process all questions in `questions_eval.jsonl` and generate the final `answers.jsonl` file in the data folder, run:
+**Running the Evaluation Script (Automated Pipeline):**
+The true power of this system is its automated pipeline. To automatically read the provided questions from `questions_eval.jsonl`, run them through the AI without any manual typing, and generate the final output, run:
 ```bash
 python evaluate.py
 ```
+
+**Where is the output?**
+The generated output file containing all 18 answers and their exact sources will be saved directly to `rag_assignment/answers.jsonl` for easy review!
 
 *(Note: The `evaluate.py` script includes an automatic retry mechanism and safety delays to gracefully handle Nvidia API rate limits and connection resets during generation).*
